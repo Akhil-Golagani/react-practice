@@ -32,14 +32,14 @@ const Body = () => {
             (res) => !res?.info?.name?.toLowerCase().includes("kingdom")
         );
 
-        console.log(withoutSpice);
+        //console.log(withoutSpice);
 
         setListOfRestaurants(withoutSpice);
         setFilteredRestaurant(withoutSpice);
     }
 
     const onlineStatus = useOnlineStatus();
-    console.log(onlineStatus);
+    //console.log(onlineStatus);
 
     if(onlineStatus === false)
     {
@@ -50,7 +50,7 @@ const Body = () => {
         <div className="body">
             <div className="filter flex">
                 <div className="search p-4 m-4">
-                    <input type="text" placeholder="Enter restaurant name" className="border border-solid border-black shadow-lg rounded-lg h-10" value={searchText} onChange={(e)=>{
+                    <input type="text" data-testid="searchInput" placeholder="Enter restaurant name" className="border border-solid border-black shadow-lg rounded-lg h-10" value={searchText} onChange={(e)=>{
                         setSearchText(e.target.value);
                     }}></input>
                     <button className="m-2 p-2 bg-blue-300 rounded-lg" onClick={()=>{

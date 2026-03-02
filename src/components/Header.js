@@ -11,7 +11,6 @@ const Header = () => {
     const onlineStatus = useOnlineStatus();
 
     const data = useContext(UserContext);
-    console.log(data);
 
     return (
         <div className="flex justify-between bg-pink-100 shadow-lg m-1 mb-1">
